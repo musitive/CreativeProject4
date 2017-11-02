@@ -11,8 +11,7 @@
         <meta name="robots" content="all">
 
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>    
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>         
         <script src="functionality.js"></script>
         <script src="scrollify.js"></script>
     </head>
@@ -27,25 +26,7 @@
             <div class="inner">
                 <h1>locations</h1>
                 <section id="locations">
-                    <div class="navigation">
-                        <ul>
-                            <li><a href="news.asp">Home</a></li>
-                            <li><a href="news.asp">News</a></li>
-                            <li><a href="contact.asp">Contact</a></li>
-                            <li><a href="about.asp">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="content" id="locDesc">
-                            Lorem ipsum dolor sit amet, qui te diceret suavitate corrumpit. 
-                            Lorem pertinacia voluptaria ad eam, pri fastidii detracto ad. 
-                            Aliquam eleifend et sed, in mei quot deseruisse. Velit nulla 
-                            electram sit in. Ut nec antiopam recteque, mundi petentium 
-                            ne pro, ius elit novum omnes eu.
-                    </div>
-                    <div class="image" id="locImage">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
-                        id="locationImg">
-                    </div>
+
                 </section>
             </div>
         </div>
@@ -54,25 +35,7 @@
             <div class="inner">
                 <h1>culture</h1>
                 <section id="culture">
-                    <div class="navigation">
-                        <ul>
-                            <li><a href="default.asp">Home</a></li>
-                            <li><a href="news.asp">News</a></li>
-                            <li><a href="contact.asp">Contact</a></li>
-                            <li><a href="about.asp">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="content" id="locDesc">
-                        Lorem ipsum dolor sit amet, qui te diceret suavitate corrumpit. 
-                        Lorem pertinacia voluptaria ad eam, pri fastidii detracto ad. 
-                        Aliquam eleifend et sed, in mei quot deseruisse. Velit nulla 
-                        electram sit in. Ut nec antiopam recteque, mundi petentium 
-                        ne pro, ius elit novum omnes eu.
-                    </div>
-                    <div class="image" id="locImage">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
-                        id="locationImg">
-                    </div>
+                    
                 </section>
             </div>
         </div>
@@ -80,28 +43,8 @@
         <div class="panel fourth" data-section-name="fourth">
             <div class="inner">
                 <h1>food</h1>
-                
                 <section id="food">
-                    <div class="navigation">
-                        <ul>
-                            <li><a href="default.asp">Place 1</a></li>
-                            <li><a href="news.asp">Place 2</a></li>
-                            <li><a href="contact.asp">Place 3</a></li>
-                            <li><a href="about.asp">Place 4</a></li>
-                            <li><a href="about.asp">Place 5</a></li>
-                        </ul>
-                    </div>
-                    <div class="content" id="locDesc">
-                        Lorem ipsum dolor sit amet, qui te diceret suavitate corrumpit. 
-                        Lorem pertinacia voluptaria ad eam, pri fastidii detracto ad. 
-                        Aliquam eleifend et sed, in mei quot deseruisse. Velit nulla 
-                        electram sit in. Ut nec antiopam recteque, mundi petentium 
-                        ne pro, ius elit novum omnes eu.
-                    </div>
-                    <div class="image" id="locImage">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
-                        id="locationImg">
-                    </div>
+                    
                 </section>
             </div>
         </div>
@@ -110,25 +53,7 @@
             <div class="inner">
                 <h1>exchange rate</h1>
                 <section id="exchangeRate">
-                    <script>
-                        var myurl = "http://api.fixer.io/latest?symbols=USD,GBP";
-                        $.ajax({
-                            url : myurl,
-                            dataType: "json",
-                            success:function(parsed_json) {
-                                var usdVal = parsed_json['rates']['USD'];
-                                console.log(usdVal);
-                                var eurVal = 1;
-                                var usdToEur = eurVal/usdVal;
-                                var eurToUsd = usdVal;
-                                everything = "<ul>";
-                                everything += "<li>US Dollars to Euros: "+usdToEur.toFixed(3)+"</li>";
-                                everything += "<li>Euros to US Dollars: "+eurToUsd.toFixed(3)+"</li>";
-                                everything += "</ul>";
-                                $(exchangeRate).html(everything)
-                            }
-                        });
-                    </script>
+                    
                 </section>
             </div>
         </div>
