@@ -13,12 +13,12 @@
 
 form, p, div, input, textarea {
     font-family: "Comfortaa-Regular";
-    color: white;
+    color: black;
 }
 
 h1 {
     font-family: "Comfortaa-Regular";
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -100,15 +100,22 @@ a:hover {
 }
 
 .first {
-    background-color: #f44336;    
+    background-image: url(http://frenchitalian.byu.edu/wp-content/uploads/2016/05/Paris.png);
 }
 
 .second {
+    opacity: 0.8;
     background-color: #3643f4;    
 }
 
 .third {
-    background-color: #3cdb2a;    
+    opacity: 0.8;
+    background-color: white;    
+}
+
+.fourth {
+    opacity: 0.8;
+    background-color: red;
 }
 
 body {
