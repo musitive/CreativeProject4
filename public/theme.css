@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Comfortaa-Regular";
+    src: url("Comfortaa-Regular.ttf");
+}
+@font-face {
+    font-family: "Comfortaa-Bold";
+    src: url("Comfortaa-Bold.ttf");
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgb(78, 78, 78);
+}
+
+form, p, div, input, textarea {
+    font-family: "Comfortaa-Regular";
+    color: white;
+}
+
+h1 {
+    font-family: "Comfortaa-Regular";
+    color: white;
+    text-align: center;
+}
+
+#weatherButton, #cityField {
+    background-color: #ff584f;
+}
+
+#searchButton, #searchStack {
+    background-color: #5160ff;
+}
+
+#wordField {
+    background-color: rgb(110, 243, 95);
+}
+
+#cityField, #searchStack, #wordField {
+    border-radius: 50px 50px 50px 50px;
+    border: 0px;
+    width: 80%;
+    font-size: large;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    width: 70%;
+    margin: auto;
+}
+
+.cities li {
+    display: inline;
+    padding-right: 1em;
+}
+
+#searchButton, #weatherButton {
+    border-radius: 50px 50px 50px 50px;
+    border: 0px;
+    padding: 10px 10px 10px 10px;
+    font-size: large;
+    color: rgb(78, 78, 78);
+    transition-duration: 0.4s;
+    margin-bottom: 3%;
+}
+
+#searchButton:hover {
+    color: white;
+    background-color: #2836d3;
+}
+
+#weatherButton:hover {
+    color: white;
+    background-color: #db3732;
+}
+
+a {
+    color: rgb(202, 202, 202);
+    text-align: left;
+    text-decoration:  none;
+}
+
+a:hover {
+    color: white;
+}
+
+#firstSection {
+    text-align: center;
+}
+
+.inner {
+    padding: 10% 0% 10% 0%;
+}
+
+.panel {
+    padding: 0% 10% 0% 10%;
+    text-align: center;  
+}
+
+.first {
+    background-color: #f44336;    
+}
+
+.second {
+    background-color: #3643f4;    
+}
+
+.third {
+    background-color: #3cdb2a;    
+}
+
+body {
+    margin: 0;
+}
+
+#txtHint {
+    margin: 0 auto;
+}
+
+.scrollable {
+    height: 200px;
+    font-size: smaller;
+    overflow-y: auto;
+}
+.red {
+    box-shadow: 0 0 10px 0px #f44336;
+}
+.blue {
+    box-shadow: 0 0 10px 0px #3643f4;
+}
+.green {
+    box-shadow: 0 0 10px 0px #3cdb2a;
+}
+
+textarea {
+    background-color: rgba(178, 34, 34, 0);
+    border: 0px;
+}
+
+#weather {
+    margin-bottom: 3%;
+}
+
+.title {
+    margin-top: 10%;
+}
