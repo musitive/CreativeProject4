@@ -101,21 +101,62 @@ a:hover {
 
 .first {
     background-image: url(http://frenchitalian.byu.edu/wp-content/uploads/2016/05/Paris.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .second {
-    opacity: 0.8;
-    background-color: #3643f4;    
+    background:repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 255, 0.6),
+        white,
+        rgba(255,0,0, 0.6)
+    );
 }
 
 .third {
-    opacity: 0.8;
-    background-color: white;    
+    background:repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 255, 0.6),
+        white,
+        rgba(255,0,0, 0.6)
+    );
 }
 
 .fourth {
-    opacity: 0.8;
-    background-color: red;
+    background:repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 255, 0.6),
+        white,
+        rgba(255,0,0, 0.6)
+    );
+}
+
+.fifth {
+    background:repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 255, 0.6),
+        white,
+        rgba(255,0,0, 0.6)
+    );
+}
+
+.fifth ul{
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    line-height: 6em;
+    font-size: 3em;
+}
+
+.sixth {
+    background:repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 255, 0.6),
+        white,
+        rgba(255,0,0, 0.6)
+    );
 }
 
 body {
