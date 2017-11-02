@@ -16,6 +16,12 @@ form, p, div, input, textarea {
     color: black;
 }
 
+body {
+    font-size: 2em;
+    letter-spacing: 0.25em;
+    text-align: center;
+}
+
 h1 {
     font-family: "Comfortaa-Regular";
     color: black;
@@ -147,7 +153,6 @@ a:hover {
     margin: 0;
     padding: 0;
     line-height: 6em;
-    font-size: 3em;
 }
 
 .sixth {
