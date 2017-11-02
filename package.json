@@ -12,6 +12,8 @@
     "ejs": "~2.4.1",
     "express": "~4.13.4",
     "morgan": "~1.7.0",
+    "ng": "0.0.0-rc6",
+    "ng-navigation-bar": "0.0.4",
     "serve-favicon": "~2.3.0"
   }
 }
