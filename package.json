@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "angular": "^1.6.6",
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
@@ -14,6 +15,7 @@
     "morgan": "~1.7.0",
     "ng": "0.0.0-rc6",
     "ng-navigation-bar": "0.0.4",
+    "request": "^2.83.0",
     "serve-favicon": "~2.3.0"
   }
 }

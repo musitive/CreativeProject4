@@ -54,7 +54,7 @@
             <div class="inner">
                 <h1>culture</h1>
                 <section id="culture">
-                    <div class="navigation">
+                    <div class="navigation" ng-controller="testCtrl">
                         <ul>
                             <li><a href="default.asp">Home</a></li>
                             <li><a href="news.asp">News</a></li>
@@ -155,5 +155,17 @@
                 });
             });
         </script>
+        <script>
+                System.baseURL = "/scripts";
+                System['import']('app/app').then(function() {
+                    // Manually bootstrap once application is loaded.
+                    // This code can be in the app.js as well, but it should
+                    // be at the end (when everything else is defined).
+                    angular.element(document).ready(function () {
+                      angular.bootstrap(document, ['Travel']);
+                    });
+                });
+        
+            </script>
     </body>
 </html>
