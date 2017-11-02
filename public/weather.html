@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>City Finder</title>
+        <link rel="stylesheet" media="screen" href="theme.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dallin Frank">
+        <meta name="description" content="The portfolio website I made for BYU C S 260">
+        <meta name="robots" content="all">
+
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>         
+        <script src="functionality.js"></script>
+        <script src="scrollify.js"></script>
+    </head>
+    <body>
+        <div class="panel first" data-section-name="first">
+            <div class="inner">
+                <h1>weather in utah</h1>
+                <section id="firstSection">
+                    <form>
+                        <input type="text" id="cityField" placeholder="enter city" value=""><br>
+                        <input id="weatherButton" type="submit" value="submit"><br>
+                    </form>
+                    <!--<textarea id="displayCity">city</textarea>-->
+                    <div id="weather">current weather</div>
+                    <div class="scrollable red">
+                        <span id="txtHint">hint</span><br>
+                    </div>
+                </section>
+            </div>
+                
+        </div>
+
+        <div class="panel second" data-section-name="second">
+            <div class="inner">
+                <h1>stackexchange</h1>
+                <section id="stackOverflow">
+                    <form>
+                        <input type="text" id="searchStack" placeholder="search stackexchange" value=""><br>
+                        <input id="searchButton" type="submit" value="search">
+                    </form>
+                    <div class="scrollable blue">
+                        <div id="searchResults"></div>
+                    </div>
+                </section>        
+            </div>
+        </div>
+
+        <div class="panel third" data-section-name="third">
+            <div class="inner">
+                <h1>owl lookup</h1>
+                <section id="def">
+                    <form>
+                        <input type="text" id="wordField" placeholder="look up definition" value="">
+                        <div class="scrollable green">
+                            <span input id="definition"></span>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        
+        <script>
+            $(function() {
+                $(".panel").css({"height":$(window).height()});
+                $.scrollify({
+                    section:".panel"
+                });
+                    
+                $(".scroll").click(function(e) {
+                    e.preventDefault();
+                    $.scrollify("move",$(this).attr("href"));
+                });
+            });
+        </script>
+    </body>
+</html>
