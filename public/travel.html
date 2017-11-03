@@ -27,24 +27,25 @@
             <div class="inner">
                 <h1>locations</h1>
                 <section id="locations">
-                    <div class="navigation">
-                        <ul>
-                            <li><a href="news.asp">Home</a></li>
-                            <li><a href="news.asp">News</a></li>
-                            <li><a href="contact.asp">Contact</a></li>
-                            <li><a href="about.asp">About</a></li>
-                        </ul>
+                    <h2 id="name">Paris</h2>
+                    <div id="left" onclick="goLeft()">
+                        <img src="http://www.freeiconspng.com/uploads/white-arrow-transparent-png-22.png">
                     </div>
-                    <div class="content" id="locDesc">
+                    <div id="main">
+                        <div class="content" id="locDesc">
                             Lorem ipsum dolor sit amet, qui te diceret suavitate corrumpit. 
                             Lorem pertinacia voluptaria ad eam, pri fastidii detracto ad. 
                             Aliquam eleifend et sed, in mei quot deseruisse. Velit nulla 
                             electram sit in. Ut nec antiopam recteque, mundi petentium 
                             ne pro, ius elit novum omnes eu.
+                        </div>
+                        <div class="image" id="locImage">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
+                            id="locationImg">
+                        </div>
                     </div>
-                    <div class="image" id="locImage">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
-                        id="locationImg">
+                    <div id="right" onclick="goRight()">
+                        <img src="http://www.freeiconspng.com/uploads/white-arrow-transparent-png-22.png">
                     </div>
                 </section>
             </div>
@@ -52,95 +53,26 @@
 
         <div class="panel third" data-section-name="third">
             <div class="inner">
-                <h1>culture</h1>
-                <section id="culture">
-                    <div class="navigation" ng-controller="testCtrl">
-                        <ul>
-                            <li><a ng-click="locationGoTo('Paris')">Home</a></li>
-                            <li><a href="news.asp">News</a></li>
-                            <li><a href="contact.asp">Contact</a></li>
-                            <li><a href="about.asp">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="content" id="locDesc">
-                        Lorem ipsum dolor sit amet, qui te diceret suavitate corrumpit. 
-                        Lorem pertinacia voluptaria ad eam, pri fastidii detracto ad. 
-                        Aliquam eleifend et sed, in mei quot deseruisse. Velit nulla 
-                        electram sit in. Ut nec antiopam recteque, mundi petentium 
-                        ne pro, ius elit novum omnes eu.
-                    </div>
-                    <div class="image" id="locImage">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
-                        id="locationImg">
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="panel fourth" data-section-name="fourth">
-            <div class="inner">
-                <h1>food</h1>
-                
-                <section id="food">
-                    <div class="navigation">
-                        <ul>
-                            <li><a href="default.asp">Place 1</a></li>
-                            <li><a href="news.asp">Place 2</a></li>
-                            <li><a href="contact.asp">Place 3</a></li>
-                            <li><a href="about.asp">Place 4</a></li>
-                            <li><a href="about.asp">Place 5</a></li>
-                        </ul>
-                    </div>
-                    <div class="content" id="locDesc">
-                        Lorem ipsum dolor sit amet, qui te diceret suavitate corrumpit. 
-                        Lorem pertinacia voluptaria ad eam, pri fastidii detracto ad. 
-                        Aliquam eleifend et sed, in mei quot deseruisse. Velit nulla 
-                        electram sit in. Ut nec antiopam recteque, mundi petentium 
-                        ne pro, ius elit novum omnes eu.
-                    </div>
-                    <div class="image" id="locImage">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
-                        id="locationImg">
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="panel fifth" data-section-name="fifth">
-            <div class="inner">
                 <h1>exchange rate</h1>
                 <section id="exchangeRate">
-                    <script>
-                        var myurl = "http://api.fixer.io/latest?symbols=USD,GBP";
-                        $.ajax({
-                            url : myurl,
-                            dataType: "json",
-                            success:function(parsed_json) {
-                                var usdVal = parsed_json['rates']['USD'];
-                                console.log(usdVal);
-                                var eurVal = 1;
-                                var usdToEur = eurVal/usdVal;
-                                var eurToUsd = usdVal;
-                                everything = "<ul>";
-                                everything += "<li>US Dollars to Euros: "+usdToEur.toFixed(3)+"</li>";
-                                everything += "<li>Euros to US Dollars: "+eurToUsd.toFixed(3)+"</li>";
-                                everything += "</ul>";
-                                $(exchangeRate).html(everything)
-                            }
+                    <script> 
+                        var url = "exchange";
+                        $.getJSON(url, function(data){
+                            var usdVal = data['rates']['USD'];
+                            console.log(usdVal);
+                            var eurVal = 1;
+                            var usdToEur = eurVal/usdVal;
+                            var eurToUsd = usdVal;
+                            everything = "<ul>";
+                            everything += "<li>US Dollars to Euros: "+usdToEur.toFixed(3)+"</li>";
+                            everything += "<li>Euros to US Dollars: "+eurToUsd.toFixed(3)+"</li>";
+                            everything += "</ul>";
+                            $(exchangeRate).html(everything)
                         });
                     </script>
                 </section>
             </div>
         </div>
-
-        <div class="panel sixth" data-section-name="sixth">
-                <div class="inner">
-                    <h1>translator</h1>
-                    <section id="translator">
-                        
-                    </section>
-                </div>
-            </div>
         
         <script>
             $(function() {
@@ -155,17 +87,5 @@
                 });
             });
         </script>
-        <script>
-                System.baseURL = "/scripts";
-                System['import']('app/app').then(function() {
-                    // Manually bootstrap once application is loaded.
-                    // This code can be in the app.js as well, but it should
-                    // be at the end (when everything else is defined).
-                    angular.element(document).ready(function () {
-                      angular.bootstrap(document, ['Travel']);
-                    });
-                });
-        
-            </script>
     </body>
 </html>

@@ -3,41 +3,31 @@ const fs = require('fs');
 const request = require('request');
 var router = express.Router();
 
-/* GET home page. */
+const locations = {
+  Paris: {
+    desc: "Hello there",
+    image: "https://cdn.vox-cdn.com/thumbor/YP3HK6voEMeWojSG9aGdJQMYlYY=/0x0:1300x650/1200x800/filters:focal(537x203:745x411)/cdn.vox-cdn.com/uploads/chorus_image/image/56242795/Obi_Wan.0.jpg"
+  }
+}
+
 router.get('/', function(req, res, next) {
   res.sendFile('travel.html', { root: 'public' });
 });
 
+router.get('/location', function(req, res) {
+  console.log("In location");
+  console.log(req.query.q);
 
-router.get('/getcity', function(req, res, next) {
-  var myRe = new RegExp("^" + req.query.q.toLowerCase());
-  fs.readFile(__dirname + '/cities.dat.txt', function(err, data) {
-    if(err) throw err;
-    var cities = data.toString().split('\n');
-	var jsonresult = [];
-    for(var i = 0; i < cities.length; i++) {
-	var result = cities[i].toLowerCase().search(myRe);
-	if (result != -1) {
-	  console.log(cities[i]);
-	  jsonresult.push({city:cities[i]});
-	}
-    }
-	res.status(200).json(jsonresult);
-  })
+  var query = req.query.q;
+  var location = locations[query];
+  console.log(locations[query]);
+  res.send(location);
 });
 
-router.get('/getdef', function(req, res, next) {
-  var word = req.query.w.toLowerCase();
-  http.get('https://owlbot.info/api/v1/dictionary/' + word, function(response) {
-	console.log(response);
-	})
-});
-
-router.get('/getword', function(req,res, next) {
-  var owl = "https://owlbot.info/api/v1/dictionary/";
-  owl += req.query.q;
-  console.log("get word");
-  request(owl).pipe(res);
+var exchange = "https://api.fixer.io/latest?symbols=USD,GBP"
+router.get('/exchange', function(req, res) {
+  console.log("In exchange");
+  request(exchange).pipe(res);
 });
 
 module.exports = router;
