@@ -19,7 +19,7 @@ form, p, div, input, textarea {
 
 .second div {
     font-size: x-large;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
 }
 
 body {
