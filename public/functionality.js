@@ -5,8 +5,6 @@ const locations = [
 
 $(document).ready(function() {
   $("#right").click(function(e) {
-      var value = $("#cityField").val();
-      console.log(value);
       e.preventDefault();
 
       var myurl= "/location?q=";
@@ -32,8 +30,6 @@ $(document).ready(function() {
   });
 
   $("#left").click(function(e) {
-    var value = $("#cityField").val();
-    console.log(value);
     e.preventDefault();
 
     var myurl= "/location?q=";
@@ -56,5 +52,5 @@ $(document).ready(function() {
             $("#main").html(everything);
         }
     });
-});
+  });
 });

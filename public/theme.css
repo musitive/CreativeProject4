@@ -199,3 +199,35 @@ textarea {
 .title {
     margin-top: 10%;
 }
+
+#left{
+    float: left;
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+}
+
+#right{
+    float: left;
+    height: 100%;
+    width: 10%;
+    right:0;
+    cursor: pointer;
+}
+#left img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    width: 100%;
+}
+#right img {
+    width: 100%;
+}
+#main {
+    width: 80%;
+    display: block;
+    float: left;
+}
