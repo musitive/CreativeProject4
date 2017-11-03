@@ -19,58 +19,67 @@
     <body>
         <div class="panel first" data-section-name="first">
             <div class="inner">
-                <h1 class="title">Travel to France</h1>
+                <h1 class="title">travel to france</h1>
             </div>   
         </div>
 
         <div class="panel second" data-section-name="second">
             <div class="inner">
-                <h1>locations</h1>
-                <section id="locations">
-                    <h2 id="name">Paris</h2>
-                    <div id="left">
-                        <img src="http://www.freeiconspng.com/uploads/white-arrow-transparent-png-22.png">
-                    </div>
-                    <div id="main">
-                        <div class="content" id="locDesc">
-                            Lorem ipsum dolor sit amet, qui te diceret suavitate corrumpit. 
-                            Lorem pertinacia voluptaria ad eam, pri fastidii detracto ad. 
-                            Aliquam eleifend et sed, in mei quot deseruisse. Velit nulla 
-                            electram sit in. Ut nec antiopam recteque, mundi petentium 
-                            ne pro, ius elit novum omnes eu.
+                <div class="b">
+                    <h1 id="name">Paris</h1>
+                    <section id="locations">
+                        <div id="left">
+                            <img src="http://www.freeiconspng.com/uploads/white-arrow-transparent-png-22.png">
                         </div>
-                        <div class="image" id="locImage">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGWgf2oMk0AwATqTEKykDZunA40Dqrhhlhmnc45QWdkGK1Z8w1Q"
-                            id="locationImg">
+                        <div id="main">
+                            <div class="content" id="locDesc">
+                                Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture.
+                                Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the
+                                Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer
+                                shops along the Rue du Faubourg Saint-Honore.
+                            </div>
                         </div>
-                    </div>
-                    <div id="right">
-                        <img src="http://www.freeiconspng.com/uploads/white-arrow-transparent-png-22.png">
-                    </div>
-                </section>
+                        <div id="right">
+                            <img src="http://www.freeiconspng.com/uploads/white-arrow-transparent-png-22.png">
+                        </div>
+                    </section>   
+                </div>
             </div>
         </div>
 
         <div class="panel third" data-section-name="third">
             <div class="inner">
-                <h1>exchange rate</h1>
-                <section id="exchangeRate">
-                    <script> 
-                        var url = "exchange";
-                        $.getJSON(url, function(data){
-                            var usdVal = data['rates']['USD'];
-                            console.log(usdVal);
-                            var eurVal = 1;
-                            var usdToEur = eurVal/usdVal;
-                            var eurToUsd = usdVal;
-                            everything = "<ul>";
-                            everything += "<li>US Dollars to Euros: "+usdToEur.toFixed(3)+"</li>";
-                            everything += "<li>Euros to US Dollars: "+eurToUsd.toFixed(3)+"</li>";
-                            everything += "</ul>";
-                            $(exchangeRate).html(everything)
-                        });
-                    </script>
-                </section>
+                <div class="b">
+                    <h1>exchange rate</h1>
+                    <section id="exchangeRate">
+                        <script>
+                            $.getJSON(url, function(data){
+                                var usdVal = data['rates']['USD'];
+                                console.log(usdVal);
+                                var eurVal = 1;
+                                usdToEur = eurVal/usdVal;
+                                var eurToUsd = usdVal;
+                                everything = "<ul>";
+                                everything += "<li>US Dollars to Euros: "+usdToEur.toFixed(3)+"</li>";
+                                everything += "<li>Euros to US Dollars: "+eurToUsd.toFixed(3)+"</li>";
+                                everything += "</ul>";
+                                $(exchangeRate).html(everything)
+                            });
+                        </script>
+                    </section>
+                    <section id="math">
+                        <input type="number" id="convert" placeholder="enter USD" value=""><br>
+                        <input id="convertButton" type="submit" value="convert">
+                        <section id="output">
+                            <div id="leftOutput">
+                                USD: <div id="l"></div>
+                            </div>
+                            <div id="rightOutput">
+                                EUR: <div id="r"></div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
             </div>
         </div>
         

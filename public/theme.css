@@ -26,6 +26,7 @@ h1 {
     font-family: "Comfortaa-Regular";
     color: black;
     text-align: center;
+    margin-top: 0%;
 }
 
 #weatherButton, #cityField {
@@ -96,10 +97,6 @@ a:hover {
     text-align: center;
 }
 
-.inner {
-    padding: 10% 0% 10% 0%;
-}
-
 .panel {
     padding: 0% 10% 0% 10%;
     text-align: center;  
@@ -108,60 +105,31 @@ a:hover {
 .first {
     background-image: url(http://frenchitalian.byu.edu/wp-content/uploads/2016/05/Paris.png);
     background-position: center;
+    background-attachment: fixed;
+    background-size: cover, 100%;
     background-repeat: no-repeat;
 }
 
 .second {
-    background:repeating-linear-gradient(
-        180deg,
-        rgba(0, 0, 255, 0.6),
-        white,
-        rgba(255,0,0, 0.6)
-    );
+    background-image: url(paris.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover, 100%;
+    background-repeat: no-repeat;
 }
 
 .third {
-    background:repeating-linear-gradient(
+    /*background:repeating-linear-gradient(
         180deg,
         rgba(0, 0, 255, 0.6),
         white,
         rgba(255,0,0, 0.6)
-    );
-}
-
-.fourth {
-    background:repeating-linear-gradient(
-        180deg,
-        rgba(0, 0, 255, 0.6),
-        white,
-        rgba(255,0,0, 0.6)
-    );
-}
-
-.fifth {
-    background:repeating-linear-gradient(
-        180deg,
-        rgba(0, 0, 255, 0.6),
-        white,
-        rgba(255,0,0, 0.6)
-    );
-}
-
-.fifth ul{
-    list-style-type: none;
-    display: inline;
-    margin: 0;
-    padding: 0;
-    line-height: 6em;
-}
-
-.sixth {
-    background:repeating-linear-gradient(
-        180deg,
-        rgba(0, 0, 255, 0.6),
-        white,
-        rgba(255,0,0, 0.6)
-    );
+    );*/
+    background-image: url(https://previews.123rf.com/images/liuzishan/liuzishan1611/liuzishan161100085/65968388-World-map-point-line-composition-representing-the-global-Global-network-connection-international-mea-Stock-Vector.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover, 100%;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -176,15 +144,6 @@ body {
     height: 200px;
     font-size: smaller;
     overflow-y: auto;
-}
-.red {
-    box-shadow: 0 0 10px 0px #f44336;
-}
-.blue {
-    box-shadow: 0 0 10px 0px #3643f4;
-}
-.green {
-    box-shadow: 0 0 10px 0px #3cdb2a;
 }
 
 textarea {
@@ -201,6 +160,7 @@ textarea {
 }
 
 #left{
+    margin-top: 8%;
     float: left;
     height: 100%;
     width: 10%;
@@ -208,6 +168,7 @@ textarea {
 }
 
 #right{
+    margin-top: 8%;
     float: left;
     height: 100%;
     width: 10%;
@@ -230,4 +191,77 @@ textarea {
     width: 80%;
     display: block;
     float: left;
+}
+#locDesc {
+    display: block;
+    float: left;
+}
+#locationImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#name, .content {
+    color: white;
+}
+.second .inner, .third .inner {
+    height: 60%;
+}
+.inner {
+    padding: 10% 0% 10% 0%;
+}
+.b {
+    background-color: rgba(10, 10, 10, 0.623);
+    height: 100%;
+    padding-top: 10%;
+    border-radius: 100px;
+    color: white;
+}
+
+.third h1 {
+    color: white;
+}
+
+#math {
+    margin-top: 10%;
+}
+
+#convert {
+    border-radius: 50px 50px 50px 50px;
+    border: 0px;
+    width: 80%;
+    font-size: large;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+#convertButton {
+    border-radius: 50px 50px 50px 50px;
+    border: 0px;
+    padding: 10px 10px 10px 10px;
+    font-size: large;
+    color: rgb(78, 78, 78);
+    transition-duration: 0.4s;
+    margin-bottom: 3%;
+}
+#convertButton:hover {
+    color: white;
+    background-color: #585858;
+}
+#exchangeRate {
+    height: 10%;
+}
+#leftOutput, #rightOutput {
+    color: white;
+    text-align: left;
+    display: block;
+    float: left;
+    padding: 0% 10% 0% 10%;
+    width: 30%;
+}
+#l, #r {
+    margin-top: 5%;
+    color: white;
 }
