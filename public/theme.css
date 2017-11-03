@@ -263,8 +263,7 @@ textarea {
     width: 30%;
 }
 #l, #r {
-    margin-top: 5%;
     color: white;
     display: block;
-    float: right;
+    float: left;
 }
