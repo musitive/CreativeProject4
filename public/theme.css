@@ -265,4 +265,6 @@ textarea {
 #l, #r {
     margin-top: 5%;
     color: white;
+    display: block;
+    float: right;
 }
